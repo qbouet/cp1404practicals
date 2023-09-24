@@ -36,13 +36,12 @@ def get_valid_score():
 def process_score(score):
     if score < 0 or score > 100:
         return "Invalid score"
+    elif score >= 90:
+        return "Excellent"
+    elif score >= 50:
+        return "Pass"
     else:
-        if score >= 90:
-            return "Excellent"
-        elif score >= 50:
-            return "Pass"
-        else:
-            return "Bad"
+        return "Bad"
 
 
 def print_stars(score):
