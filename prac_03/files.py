@@ -15,3 +15,23 @@ in_file = open(NAME_FILE, "r")
 name = in_file.read()
 print(f"Your name is {name}")
 in_file.close()
+
+# 3. Create a text file called numbers.txt and save it in your prac directory.
+# Put the following three numbers on separate lines in the file and save it:
+# 17
+# 42
+# 400
+# Write code that opens "numbers.txt", reads only the first two numbers and
+# adds them together then prints the result, which should be... 59.
+
+NUMBERS_FILE = "numbers.txt"
+out_file = open(NUMBERS_FILE, 'w')
+print(f"17\n42\n400", file=out_file)
+out_file.close()
+
+in_file = open(NUMBERS_FILE, "r")
+first_number = int(in_file.readline())
+second_number = int(in_file.readline())
+sum_of_numbers = first_number + second_number
+print(f"Sum of first 2 numbers is {sum_of_numbers}")
+in_file.close()
