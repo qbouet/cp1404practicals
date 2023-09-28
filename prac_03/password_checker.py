@@ -50,7 +50,7 @@ def is_valid_password(password):
             count_special += 1
 
     # if any of the 'normal' counts are zero, return False
-    if not count_lower or not count_upper or not count_digit or not count_special:
+    if count_lower == 0 or count_upper == 0 or count_digit == 0 or count_special == 0:
         return False
 
     # TODO: if special characters are required, then check the count of those
