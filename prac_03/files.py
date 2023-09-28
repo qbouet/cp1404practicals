@@ -35,3 +35,14 @@ second_number = int(in_file.readline())
 sum_of_numbers = first_number + second_number
 print(f"Sum of first 2 numbers is {sum_of_numbers}")
 in_file.close()
+
+# 4. Now write a fourth block of code that prints the total for all lines
+# in numbers.txt or a file with any number of numbers.
+
+NUMBERS_FILE = "numbers.txt"
+sum_of_numbers = 0
+with open(NUMBERS_FILE, "r") as in_file:
+    for line in in_file:
+        current_number = int(line)
+        sum_of_numbers = sum_of_numbers + current_number
+print(f"Sum of numbers is {sum_of_numbers}")
