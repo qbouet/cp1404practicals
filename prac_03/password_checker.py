@@ -1,6 +1,14 @@
 """
 CP1404/CP5632 - Practical
-Password checker "skeleton" code to help you get started
+Asks for and validates a person's password. Not to compare a password to a known
+password, but to validate the 'strength' of a new password,
+All passwords must contain at least one each of:
+- digit
+- lowercase letter
+- uppercase letter
+Also checks:
+a. the minimum and maximum length of the password
+b. whether a special character (not alphabetical or numerical) is required
 """
 
 MIN_LENGTH = 2
@@ -59,10 +67,6 @@ def is_valid_password(password):
             return False
 
     # if we get here (without returning False), then the password must be valid
-    print(f"number of lowercase: {count_lower}")
-    print(f"number of uppercase: {count_upper}")
-    print(f"number of digits: {count_digit}")
-    print(f"number of special characters: {count_special}")
     return True
 
 
