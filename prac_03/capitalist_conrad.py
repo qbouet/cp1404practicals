@@ -15,10 +15,10 @@ MAX_DECREASE = 0.05  # 5%
 MIN_PRICE = 1
 MAX_PRICE = 100
 INITIAL_PRICE = 10.0
-INITIAL_NUMBER_OF_DAYS = 0
 
 price = INITIAL_PRICE
-number_of_days = INITIAL_NUMBER_OF_DAYS
+day = 0
+# open the output file for writing ('w') (creates new file if nonexistent)
 out_file = open(OUTPUT_FILE, 'w')
 print(f"Starting price: ${price:,.2f}", file=out_file)
 
@@ -34,7 +34,7 @@ while MIN_PRICE <= price <= MAX_PRICE:
         # generate a random floating-point number
         # between negative MAX_DECREASE and 0
         price_change = random.uniform(-MAX_DECREASE, 0)
-    number_of_days += 1
+    day += 1
     price *= (1 + price_change)
-    print(f"On day {number_of_days} price is: {price:,.2f}", file=out_file)
+    print(f"On day {day} price is: {price:,.2f}", file=out_file)
 out_file.close()
