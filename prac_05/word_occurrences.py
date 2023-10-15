@@ -1,6 +1,6 @@
 """
 CP1404Practical
-File Occurrences Program
+Word Occurrences Program
 time estimate = 40 minutes
 """
 word_to_count = {}
