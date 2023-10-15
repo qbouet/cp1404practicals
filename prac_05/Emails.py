@@ -11,9 +11,7 @@ def main():
     while email != "":
         name = get_name_from_email(email)
         answer = input(f"Is your name {name}? (Y/n)")
-        if answer.upper() == "Y" or answer == "":
-            pass
-        else:
+        if answer.upper() != "Y" and answer != "":
             name = input("Name: ")
         email_to_name[email] = name
         email = input("Email: ")
