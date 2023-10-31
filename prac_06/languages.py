@@ -2,7 +2,7 @@
 CP1404 Practical
 languages Program
 time estimate = 30min
-actual time =
+actual time = 23min
 """
 
 from programming_language import ProgrammingLanguage
