@@ -16,6 +16,10 @@ class Guitar:
         """Return a string representation of a Guitar."""
         return f"{self.name} ({self.year}) : ${self.cost:,.2f}"
 
+    def __lt__(self, other):
+        """Compare guitars by year"""
+        return self.year < other.year
+
     def get_age(self):
         """Get age of Guitar based on the CURRENT_YEAR."""
         age = CURRENT_YEAR - self.year
