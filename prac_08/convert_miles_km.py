@@ -8,6 +8,7 @@ from kivy.lang import Builder
 
 __author__ = 'Quentin Bouet'
 
+
 class MilesConvertingApp(App):
     """ MilesConvertingApp is a Kivy App for converting miles to kilometres """
     def build(self):
@@ -16,3 +17,5 @@ class MilesConvertingApp(App):
         self.root = Builder.load_file('convert_miles_km.kv')
         return self.root
 
+
+MilesConvertingApp().run()
