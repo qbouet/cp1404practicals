@@ -25,11 +25,23 @@ class MilesConvertingApp(App):
 
     def handle_calculate(self):
         """Handle calculations from the text input by updating the model from the view."""
-        self.message = str(float(self.root.ids.input_number.text) * MILES_TO_KM)
+        value = self.get_valid_miles()
+        self.message = str(value * MILES_TO_KM)
 
     def handle_increment(self, increment):
         """Handle increments to the text input by updating the model from the view."""
-        self.root.ids.input_number.text = str(float(self.root.ids.input_number.text) + increment)
+        value = self.get_valid_miles()
+        self.root.ids.input_number.text = str(value + increment)
+        self.handle_calculate()
+
+    def get_valid_miles(self):
+        """Get valid miles (get text input from text entry widget), convert to float
+        return 0 if text input is empty or invalid float"""
+        try:
+            value = float(self.root.ids.input_number.text)
+            return value
+        except ValueError:
+            return 0
 
 
 MilesConvertingApp().run()
