@@ -1,6 +1,6 @@
 """
 CP1404/CP5632 Practical
-Car class
+Taxi Class (child of Car Class)
 """
 from prac_09.car import Car
 
