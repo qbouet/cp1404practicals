@@ -22,10 +22,10 @@ def main():
             print("Taxis available:")
             display_taxis(taxis)
             taxi_index = int(input("Choose taxi: "))
-            if not 0 <= taxi_index < len(taxis):
-                print("Invalid taxi choice")
-            else:
+            try:
                 current_taxi = taxis[taxi_index]
+            except IndexError:
+                print("Invalid taxi choice")
         elif choice == "d":
             if current_taxi is None:
                 print("You need to choose a taxi before you can drive")
