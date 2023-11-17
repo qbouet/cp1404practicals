@@ -14,7 +14,7 @@ def main():
     super_fancy_taxi = SilverServiceTaxi("Super_fancy_taxi", 200, 2)
     super_fancy_taxi.drive(18)
     print(super_fancy_taxi)
-    print(f"Fare: ${super_fancy_taxi.get_fare()}")
+    print(f"Fare: ${super_fancy_taxi.get_fare():.2f}")
 
 
 main()
