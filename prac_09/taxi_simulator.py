@@ -12,11 +12,14 @@ MENU = """q)uit, c)hoose taxi, d)rive"""
 def main():
     """Taxi Simulator"""
     taxis = [Taxi("Prius", 100), SilverServiceTaxi("Limo", 100, 2), SilverServiceTaxi("Hummer", 200, 4)]
+    # Reset variables
     total_bill = 0
     current_taxi = None
+
     print("Let's drive!")
     print(MENU)
     choice = input(">>> ").lower()
+    # Process choice
     while choice != "q":
         if choice == "c":
             print("Taxis available:")
@@ -42,6 +45,7 @@ def main():
         print(MENU)
         choice = input(">>> ").lower()
 
+    # Display final states of taxis
     print(f"Total trip cost: ${total_bill:.2f}")
     print("Taxis are now:")
     display_taxis(taxis)
